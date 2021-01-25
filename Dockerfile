@@ -35,6 +35,10 @@ RUN mkdir -p /run/php && \
     chown -R www-data:www-data /var/www/html && \
     chown -R www-data:www-data /run/php
 
+RUN rm -r -f /var/www/html && \
+    cd /var/www/ && \
+    git clone https://gitlab.com/WoW-CMS/BlizzCMS-Plus.git html
+
 # Volume configuration
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
 
@@ -43,6 +47,6 @@ COPY start.sh /start.sh
 CMD ["./start.sh"]
 
 # Expose Port for the Application 
-EXPOSE 80 443
+EXPOSE 80 443 3306
 
 

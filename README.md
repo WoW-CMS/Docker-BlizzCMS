@@ -1,21 +1,9 @@
-# _Docker BlizzCMS Plus_
-**_Docker BlizzCMS Plus_** is a restructured and improved version of BlizzCMS **v1**. The development of this version is made constantly by the developers of **WoW-CMS** in closed source taking into consideration that it is necessary to obtain a **license** for a public use.
+# _Docker Image for BlizzCMS_
 
-[![Project Status](https://img.shields.io/badge/Status-In_Development-yellow.svg?style=flat-square)](#)
-[![Project Version](https://img.shields.io/badge/Version-1.0.4-green.svg?style=flat-square)](#)
+[![Project Version](https://img.shields.io/badge/Version-V0.1-green.svg?style=for-the-badge)](#)
 
-## Useful Links
+This repository provides you an easy deployment of BlizzCMS in a few steps without the need to install the packages for PHP, web server and any other server software on your local machine.
 
-* [Website](https://wow-cms.com)
-* [Bugtracker](https://dev.wow-cms.com)
-* [Docs](https://docs.wow-cms.com)
+## Licence
 
-## Active Developers
-
-* @perioner - *Back/Front-End Developer*
-* @DZywolf - *Back/Front-End Developer*
-* @Stevej - *Back/Front-End Developer*
-
-## Copyright
-
-Copyright © 2020 [WoW-CMS](https://wow-cms.com).
+This project is licensed under the [MIT License](LICENSE).

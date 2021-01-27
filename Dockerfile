@@ -2,33 +2,34 @@
 FROM ubuntu:20.04
 
 # LABEL about the custom image
-LABEL maintainer="pjctcms@gmail.com"
+LABEL maintainer="WoW-CMS <pjctcms@gmail.com>"
 LABEL version="0.1"
-LABEL description="Docker for BlizzCMS Plus in Ubuntu  20.04"
+LABEL description="Docker image for BlizzCMS with Ubuntu 20.04"
 
 # Disable Prompt During Packages Installation
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Update Ubuntu Software repository
 RUN apt update
+RUN apt upgrade -y
 
-# Install nginx, php-fpm and supervisord from ubuntu repository
-RUN apt install -y git nginx php php-cli php-gd php-mysql php-pdo php-mbstring php-tokenizer php-bcmath php-xml php-fpm php-curl php-zip mysql-server  supervisor && \
+# Install git, nginx, php extensions, mysql and supervisor from ubuntu repository
+RUN apt install -y git nginx php7.4 php7.4-{cli,gd,mysql,pdo,mbstring,gmp,xml,fpm,curl,soap,zip} mysql-server  supervisor && \
     rm -rf /var/lib/apt/lists/* && \
     apt clean
 
-#Define the ENV variable
+# Define the ENV variable
 ENV nginx_vhost /etc/nginx/sites-available/default
 ENV php_conf /etc/php/7.4/fpm/php.ini
 ENV nginx_conf /etc/nginx/nginx.conf
 ENV supervisor_conf /etc/supervisor/supervisord.conf
 
-# Enable PHP-fpm on nginx virtualhost configuration
+# Enable PHP-FPM on nginx virtualhost configuration
 COPY default ${nginx_vhost}
 RUN sed -i -e 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' ${php_conf} && \
     echo "\ndaemon off;" >> ${nginx_conf}
 
-#Copy supervisor configuration
+# Copy supervisor configuration
 COPY supervisord.conf ${supervisor_conf}
 
 RUN mkdir -p /run/php && \
@@ -48,5 +49,3 @@ CMD ["./start.sh"]
 
 # Expose Port for the Application 
 EXPOSE 80 443 3306
-
-

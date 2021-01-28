@@ -14,7 +14,7 @@ RUN apt update
 RUN apt upgrade -y
 
 # Install git, nginx, php extensions, mysql and supervisor from ubuntu repository
-RUN apt install -y git nginx php7.4 php7.4-{cli,gd,mysql,pdo,mbstring,gmp,xml,fpm,curl,soap,zip} mysql-server  supervisor && \
+RUN apt install -y git nginx php7.4 php7.4-cli php7.4-curl php7.4-fpm php7.4-gd php7.4-gmp php7.4-mbstring php7.4-mysql php7.4-pdo php7.4-soap php7.4-xml php7.4-zip mysql-server supervisor && \
     rm -rf /var/lib/apt/lists/* && \
     apt clean
 

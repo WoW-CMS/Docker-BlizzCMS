@@ -7,12 +7,16 @@ This repository provides you an easy deployment of BlizzCMS in a few steps witho
 ### Pre requirements  📋
 
 ```
-Da un ejemplo
+You only need to have Docker installed and running.
 ```
 
 ## Deployment  📦
 
+```sh
 
+docker run -d -p 80:80 --name name-container docker
+
+```
 
 ## Built with  🛠️
 
@@ -38,14 +42,14 @@ You can also look at the list of all [contributors](https://github.com/WoW-CMS/D
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Expresiones de Gratitud 🎁
+## Expressions of Gratitude  🎁
 
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
+* Tell others about this project 📢
+* Invite a beer 🍺 or a coffee ☕ to someone on the team.
+* Give thanks publicly 🤓. 
+
 
 
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+⌨️ con ❤️ por [Sayghteight](https://github.com/sayghteight) 😊

@@ -17,7 +17,7 @@ You only need to have Docker installed and running.
 git clone https://github.com/WoW-CMS/Docker-BlizzCMS.git docker
 cd docker
 docker build -t docker .
-docker run -d -p 80:80 --name name-container docker
+docker run -d -p 3306:3310 --name name-container docker
 ```
 
 To connect to your docker is really easy.

@@ -20,7 +20,7 @@ server {
     }
 
     # Deny access to folders
-    location ~ ^/(application|system)/ {
+    location ~ ^/(application|system|vendor)/ {
         return 403;
     }
 

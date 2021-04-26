@@ -38,7 +38,7 @@ RUN mkdir -p /run/php && \
 
 RUN rm -r -f /var/www/html && \
     cd /var/www/ && \
-    git clone https://gitlab.com/WoW-CMS/BlizzCMS-Plus.git html
+    git clone https://github.com/WoW-CMS/BlizzCMS.git html
 
 # Volume configuration
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]

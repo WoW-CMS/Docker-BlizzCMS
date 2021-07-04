@@ -19,6 +19,10 @@ server {
         deny all;
     }
 
+    location ~* /application/.*\.(?:css(\.map)?|js(\.map)?|jpe?g|png|gif|ico|cur|webp|mp3|mp4|ogg|webm|svgz?|ttf|ttc|otf|eot|woff|woff2?)$ {
+        allow all;
+    }
+
     # Deny access to folders
     location ~ ^/(application|system|vendor)/ {
         return 403;

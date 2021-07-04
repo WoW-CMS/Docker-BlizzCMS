@@ -2,7 +2,7 @@
 
 This repository provides you an easy deployment of BlizzCMS in a few steps without the need to install the packages for PHP, web server and any other server software on your local machine.
 
-[![Version](https://img.shields.io/badge/Version-0.1-green.svg?style=for-the-badge)](https://github.com/WoW-CMS/Docker-BlizzCMS/releases)
+[![Version](https://img.shields.io/github/v/release/WoW-CMS/Docker-BlizzCMS?color=green&style=for-the-badge&logo=github)](https://github.com/WoW-CMS/Docker-BlizzCMS/releases)
 
 ### 📋 Pre-requirements
 
@@ -35,6 +35,11 @@ docker exec -it name-container /bin/bash
 ## ✒️ Authors & Contributors
 
 * [WoW-CMS Developers and Contributors](https://github.com/WoW-CMS/Docker-BlizzCMS/graphs/contributors)
+
+## 🔗 Important Links
+
+* [Website](https://wow-cms.com)
+* [Our Discord](https://discord.wow-cms.com)
 
 ## 📄 License
 
